@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learnify.com</title>
-    <link rel="stylesheet" href="/project.css">
-    <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-    
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/modal-style.css"> <!-- Add this line for the modal CSS -->
 </head>
 <body>
-    <!-- Header start -->
+    <script src="/script.js"></script>
     <header>
         <h1 class="logo">Learnify</h1>
         <button class="menu-toggle">☰</button>
@@ -22,92 +20,94 @@
             <a href="#">Contact</a>
             <a href="/login.html" target="_blank"><button class="button">Log in</button></a>
             <a href="/signup.html" target="_blank"><button>Sign up</button></a>
+            <a href="#" class="cart-icon">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+                </svg>
+                <span class="cart-count">0</span>
+            </a>
         </nav>
     </header>
-
-    <!-- 1st welcome container -->
+    
     <div class="hero">
         <video autoplay muted loop id="heroVideo">
-            <source src="/team.mp4" type="video/mp4">
+            <source src="/images/team.mp4" type="video/mp4">
         </video>
         <div class="hero-content">
             <div class="search-box">
                 <input type="text" class="search-input" placeholder="What you want to learn ?">
                 <button class="search-button"><i class="fas fa-search"></i></button>
             </div>
-            
             <h2>Learn New Skills Online</h2>
             <p>Discover a variety of courses and start learning today.</p>
             <button type="submit" class="join">Join Now</button>
         </div>
     </div>
-    
-    <!-- 1st welcome container closed-->
 
     <div class="course-section">
         <h1>Popular Courses</h1>
         <div class="container">
-            <div class="course-card">
-                <img src="/web.jpg" alt="Full Stack Developer">
+            <div class="course-card" data-course-id="1">
+                <img src="/images/web.webp" alt="Full Stack Developer">
                 <div class="content">
                     <h3>Full Stack Developer</h3>
                     <p>A full stack developer is proficient in both front-end and back-end development, enabling them to handle all aspects of a web application.</p>
-                    <button class="buy-button">Buy</button>
+                    <button class="buy-button">Add to cart</button>
                     <span class="price">₹499</span>
                     <s>₹1199</s>
                     <span class="discount">80% off</span>
                 </div>
             </div>
             <div class="course-card">
-                <img src="/c.png" alt="C/C++ Language">
+                <img src="/images/c.webp" alt="C/C++ Language">
                 <div class="content">
                     <h3>C/C++ Language</h3>
                     <p>C is a powerful general-purpose programming language. It is fast, portable, and available on all platforms.</p>
-                    <button class="buy-button">Buy</button>
+                    <button class="buy-button">Add to cart</button>
                     <span class="price">₹799</span>
                     <s>₹1899</s>
                     <span class="discount">70% off</span>
                 </div>
             </div>
             <div class="course-card">
-                <img src="/cyber-security-concept_23-2148539596.jpg" alt="Cyber Security">
+                <img src="/images/cyber-security.webp" alt="Cyber Security">
                 <div class="content">
                     <h3>Cyber Security</h3>
                     <p>Cybersecurity involves protecting computer systems, networks, and data from digital attacks, ensuring confidentiality, integrity, and availability of information.</p>
-                    <button class="buy-button">Buy</button>
+                    <button class="buy-button">Add to cart</button>
                     <span class="price">₹1199</span>
                     <s>₹2599</s>
                     <span class="discount">68% off</span>
                 </div>
             </div>
             <div class="course-card">
-                <img src="/essential-photoshop.avif" alt="Photo Editing">
+                <img src="/images/essential-photoshop.webp" alt="Photo Editing">
                 <div class="content">
                     <h3>Photo Editing</h3>
                     <p>Photo editing is the process of altering images to enhance their appearance, correct flaws, and achieve desired effects.</p>
-                    <button class="buy-button">Buy</button>
+                    <button class="buy-button">Add to cart</button>
                     <span class="price">₹1499</span>
                     <s>₹3099</s>
                     <span class="discount">75% off</span>
                 </div>
             </div>
             <div class="course-card">
-                <img src="/Software-Development-Process.jpg" alt="Software Development">
+                <img src="/images/Software-Development-Process.webp" alt="Software Development">
                 <div class="content">
                     <h3>Software Development</h3>
                     <p>Software development involves the design, creation, and maintenance of software applications through coding and programming.</p>
-                    <button class="buy-button">Buy</button>
+                    <button class="buy-button">Add to cart</button>
                     <span class="price">₹4099</span>
                     <s>₹6000</s>
                     <span class="discount">86% off</span>
                 </div>
             </div>
             <div class="course-card">
-                <img src="/video-editing.jpg" alt="Video Editing">
+                <img src="/images/video-editing.webp" alt="Video Editing">
                 <div class="content">
                     <h3>Video Editing</h3>
                     <p>Video editing involves manipulating and rearranging video shots to create a new work.</p>
-                    <button class="buy-button">Buy</button>
+                    <button class="buy-button">Add to cart</button>
                     <span class="price">₹2099</span>
                     <s>₹5099</s>
                     <span class="discount">90% off</span>
@@ -115,9 +115,7 @@
             </div>
         </div>
     </div>
-    <!-- Course section closed -->
     
-    <!-- New Accelerate Growth Section -->
     <div class="container2">
         <section class="section2">
             <h2>Accelerate growth — for you or your organization</h2>
@@ -171,67 +169,67 @@
             </div>
         </section>
     </div>
-    <!-- New Accelerate Growth Section closed -->
-<!-- Companies Collaboration Section -->
-<section class="companies">
-    <div class="trusted-by">
-        <h2>Trusted by over 15,000 companies and millions of learners around the world</h2>
-        <div class="company-logos">
-            <img src="/wipro.png" alt="VW">
-            <img src="/samsung.jpg" alt="Samsung">
-            <img src="/cisco.png" alt="Cisco">
-            <img src="/Vimeo-logo.svg" alt="Vimeo">
-            <img src="/pgnew.jpg" alt="P&G">
-            <img src="/hp.png" alt="HP Enterprise">
-            <img src="/citi.avif" alt="Citi">
-            <img src="/Ericsson-Logo.png" alt="Ericsson">
-            <img src="/Hero-logo.jpg" alt="hero-honda">
-            <img src="/flipkart.jpg" alt="flipkart">
-            <img src="/facebook.png" alt="facebook">
-            <img src="/x.png" alt="twitter">
-            <img src="/google.webp" alt="google">
-            <img src="/microsoft.jpg" alt="Microsoft">
-            <img src="/amazone.webp" alt="Amazone">
-            <!-- <img src="/ibm.png" alt="IBM"> -->
-        </div>
-    </div>
-</section>
-<!-- Companies Collaboration Section closed -->
-<!-- contact us form starts -->
-<section class="contact-form">
-    <h2>Apply now</h2>
-    <p>Fill out this form, and we will contact you by the  information frequently !</p>
-    <form>
-        <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="your name">
-        </div>
-        <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" placeholder="abcxxxx@email.com" required>
-        </div>
-        <div class="form-group">
-            <label for="phone">Phone number *</label>
-            <input type="text" id="phone" name="phone" placeholder="Your phone number" required>
-        </div>
-        <div class="form-group">
-            <label for="portfolio">Whatsapp Number</label>
-            <input type="url" id="whatsapp-no" name="whatsapp-no" placeholder="Your whatsapp number">
-        </div>
-        <div class="form-group">
-            <label for="cover-letter">Message us *</label>
-            <textarea id="cover-letter" name="cover-letter" placeholder="Example Text" required></textarea>
-        </div>
-        <button type="submit">Submit</button>
-    </form>
-</section>
-<!-- contact us form ends -->
 
-    <!-- Footer -->
+    <section class="companies">
+        <div class="trusted-by">
+            <h2>Trusted by over 15,000 companies and millions of learners around the world</h2>
+            <div class="company-logos">
+                <img src="/images/samsung.webp" alt="Samsung">
+                <img src="/images/cisco.webp" alt="Cisco">
+                <img src="/images/Vimeo-logo.webp" alt="Vimeo">
+                <img src="/images/pgnew.webp" alt="P&G">
+                <img src="/images/hp.webp" alt="HP Enterprise">
+                <img src="/images/citi.webp" alt="Citi">
+                <img src="/images/Ericsson-Logo.webp" alt="Ericsson">
+                <img src="/images/Hero-logo.webp" alt="hero-honda">
+                <img src="/images/flipkart.webp" alt="flipkart">
+                <img src="/images/facebook.webp" alt="facebook">
+                <img src="/images/x.webp" alt="twitter">
+                <img src="/images/google.webp" alt="google">
+                <img src="/images/microsoft.webp" alt="Microsoft">
+                <img src="/images/amazone.webp" alt="Amazone">
+                <img src="/images/ibm.webp" alt="IBM">
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact-form">
+        <h2>Apply now</h2>
+        <p>Fill out this form, and we will contact you by the information frequently !</p>
+        <form>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="abcxxxx@email.com" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone number *</label>
+                <input type="text" id="phone" name="phone" placeholder="Your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="portfolio">Whatsapp Number</label>
+                <input type="url" id="whatsapp-no" name="whatsapp-no" placeholder="Your whatsapp number">
+            </div>
+            <div class="form-group">
+                <label for="cover-letter">Message us *</label>
+                <textarea id="cover-letter" name="cover-letter" placeholder="Example Text" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Items added to the cart.</p>
+        </div>
+      </div>
+
     <footer>
         <p>&copy; 2024 Learnify. All rights reserved.</p>
     </footer>
-    
-    <script src="/project.js"></script>
 </body>
 </html>
